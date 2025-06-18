@@ -1,6 +1,6 @@
 # Python CRUD Application for Inventory Management of a Store
 
-A comprehensive Python application for managing **Stock** data of an **Inventory/Warehouse or some type of Storage Facility** with Create, Read, Update, and Delete (CRUD) operations.
+A **Python-based CRUD application** with a simple menu-driven interface that allows users to manage inventory using Create, Read, Update, and Delete operations.
 
 ---
 
@@ -9,23 +9,25 @@ A comprehensive Python application for managing **Stock** data of an **Inventory
 This project caters to the **various industries** that keep track of inventory in a warehouse. It can be used in:
 
 - Supermarkets (e.g., Indomaret, Alfamart)
-- Grocery stores
-- Retail stores
-- E-commerce warehouses for online resellers (e.g., Tokopedia, Shopee)
-- Manufacturing factories
+- Grocery stores (e.g, Primo, HERO, Giant)
+- Retail stores (e.g, clothing, electronics)
+- E-commerce warehouses for online resellers (e.g, Tokopedia, Shopee)
+- Manufacturing plants and factories (e.g, raw mining materials and goods)
 - Logistics and distribution centers
+- Automotive parts suppliers 
 
-**Stock data** plays an important role—for example, in supermarkets, most items go through a central warehouse first. This setup enables supermarkets to:
+**Stock data** plays an important role in any business that handles physical goods—for example, in supermarkets, most items go through a warehouse system first. This setup enables supermarkets to:
 
-- Buy in bulk
-- Store stock before shelving
-- Rotate and manage items (especially perishable goods)
+- Buy in bulk (saving cost from distributors)
+- Store stock before shelving by accurately tracking supply (allowing restocking at appropriate times)
+- Rotate and manage items (especially goods with expiration dates)
+- Perform product performance analysis
 
-Since a single distribution center may serve multiple branches, having reliable inventory data is **critical for operational efficiency.**
+If a single distribution center may serve multiple branches of supermarkets, having accurate inventory data is **important for operational efficiency.**
 
 ### ✅ Benefits
-- Storage and space management for supermarkets and the items sold  
-- Save on costs when buying items in bulk  
+- Effective Storage and space management for supermarkets and the warehouse  
+- Save on different costs (such as opportunity costs, delivery costs, storage costs, etc)
 - Improved data accuracy and consistency when moving items in and out of the warehouse
 
 ---
@@ -34,11 +36,13 @@ Since a single distribution center may serve multiple branches, having reliable 
 
 This application is designed for multiple roles, including:
 
-- Warehouse Managers  
-- Inventory Managers  
-- Truck Drivers  
-- Shelf-Stockers  
-- Procurement Personnel  
+- **Inventory Managers** – Monitor stock levels, product data, and restocking needs  
+- **Warehouse Staff** – Record incoming and outgoing stock  
+- **Procurement Officers** – Track product availability before placing new orders  
+- **Store Managers** – Oversee product performance and identify best- or worst-performing products  
+- **Logistics Coordinators** – Ensure efficient movement of products between the warehouses, suppliers, and supermarkets  
+- **Inventory Analysts** – Analyze supply and demand to report on product performance  
+- **Supply Chain Managers** – Coordinate between warehouses, suppliers, and supermarkets
 
 It helps them **buy, ship, and sell** items according to current inventory data.
 
@@ -46,57 +50,54 @@ It helps them **buy, ship, and sell** items according to current inventory data.
 
 ## 🔧 Features
 
-### ➕ Create
+### ✅ Create
 - Add new **Stock** entries with essential details such as:
   - Item ID
   - Price
   - Expiration Date
-- Implement **ID validation rules** to avoid duplicate item entries.
+- ID validation to avoid duplicate entries.
 
-### 🔍 Read
+### ✅ Read
 - Search and retrieve inventory records based on:
-  - Expiration date
-  - Price
   - Item ID
-- Display comprehensive item information in a **user-friendly format**.
-- Sorting capabilities based on price and expiration date (**Not yet implemented**).
+  - Item Name
+- View all items in a **user-friendly table format** (using tabulate).
 
-### ✏️ Update
+### ✅ Update
 - Modify existing inventory data, such as:
-  - Price changes
-  - Stock quantity adjustments
-- Provide confirmation or error messages based on the result.
+  - Price updates
+  - Stock quantity changes
+- User confirmation for each update.
 
-### ❌ Delete
-- Remove records (e.g., for **discontinued products**).
-- Authorization checks (**Not yet implemented**).
-- Implement **soft delete** via a recycle bin to prevent permanent data loss.
-- Optional: **Data archiving capabilities?** *(To be considered.)*
-
-### 🔐 Security
-- User authentication and authorization for **different roles** to control access to specific CRUD functions.
-
-### 📊 Reporting (Optional)
-- Generate reports or summaries from inventory data to support decision-making processes.
-- Export data in various formats (e.g., CSV, Excel) for further analysis *(Optional – to be considered).*
+### ✅ Delete
+- Remove records (e.g for discontinued products).
+- Includes a **Recycle Bin** feature (soft delete).
+- Option to restore or permanently delete items.
 
 ---
 
-## ⚙️ Installation
+## 📋 Inventory Item Data Structure
 
-### Prerequisites
-- Python version (specify the required version)
-- Required packages (e.g., `pandas`, `tabulate`, etc.)
+Each item in the inventory contains the following details:
 
-### Installation Steps
-```bash
-git clone https://github.com/<your-username>/<your-repo-name>.git
-cd <your-repo-name>
-pip install -r requirements.txt
+| Item Detail       | Type     | Description                                   |
+|-------------------|----------|-----------------------------------------------|
+| item_id           | String   | Unique identifier (SKU-style) for each item   |
+| item_name         | String   | Name of the product                          |
+| stock_quantity    | Integer  | Quantity currently in stock                  |
+| price             | Float    | Selling price per unit                       |
+| expiration_date   | Date     | Product expiry date (useful for perishables) |
 
+---
 
-[Field 1]: (Data type) - Description of the field's purpose in the business context.
-[Field 2]: (Data type) - Description of the field's purpose in the business context.
-... (List all relevant fields)
-Contributing
-We welcome contributions to this project! Please feel free to open a pull request, sent to [your_email] or submit an issue if you encounter any problems or have suggestions for improvements.
+## ⚙️ How to Run This Program
+
+### Requirements
+- Python 3.10 or higher
+- Python package: `tabulate`
+
+### Setup Steps
+1. Open your terminal or command prompt.
+2. Navigate to the folder containing the `.py` file using `cd`.
+3. Install the required package:
+   pip install tabulate
