@@ -4,7 +4,7 @@ A **Python-based CRUD application** with a simple menu-driven interface that all
 
 ---
 
-## 📌 Business Understanding
+## Business Understanding
 
 This project caters to the **various industries** that keep track of inventory in a warehouse. It can be used in:
 
@@ -25,14 +25,14 @@ This project caters to the **various industries** that keep track of inventory i
 
 If a single distribution center may serve multiple branches of supermarkets, having accurate inventory data is **important for operational efficiency.**
 
-### ✅ Benefits
+### Benefits
 - Effective Storage and space management for supermarkets and the warehouse  
 - Save on different costs (such as opportunity costs, delivery costs, storage costs, etc)
 - Improved data accuracy and consistency when moving items in and out of the warehouse
 
 ---
 
-## 👤 Target Users
+## Target Users
 
 This application is designed for multiple roles, including:
 
@@ -50,33 +50,33 @@ It helps them **buy, ship, and sell** items according to current inventory data.
 
 ## 🔧 Features
 
-### ✅ Create
+### Create
 - Add new **Stock** entries with essential details such as:
   - Item ID
   - Price
   - Expiration Date
 - ID validation to avoid duplicate entries.
 
-### ✅ Read
+###  Read
 - Search and retrieve inventory records based on:
   - Item ID
   - Item Name
 - View all items in a **user-friendly table format** (using tabulate).
 
-### ✅ Update
+###  Update
 - Modify existing inventory data, such as:
   - Price updates
   - Stock quantity changes
 - User confirmation for each update.
 
-### ✅ Delete
+###  Delete
 - Remove records (e.g for discontinued products).
 - Includes a **Recycle Bin** feature (soft delete).
 - Option to restore or permanently delete items.
 
 ---
 
-## 📋 Inventory Item Data Structure
+##  Inventory Item Data Structure
 
 Each item in the inventory contains the following details:
 
@@ -90,7 +90,7 @@ Each item in the inventory contains the following details:
 
 ---
 
-## ⚙️ How to Run This Program
+##  How to Run This Program
 
 ### Requirements
 - Python 3.10 or higher
